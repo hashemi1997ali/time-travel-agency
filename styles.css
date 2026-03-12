@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+body * {
+    font-family: 'Anta', Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(9, 9, 51);
+    color: white;
+    padding: 1.5rem;
+}
+
+header nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 1.5rem;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+.service {
+    background-color: lightgray;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    padding-right: 1.5rem;
+    height: 1.5rem;
+}
+
+form {
+    padding: 1.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.form-group button {
+    grid-column: 2;
+    padding: 10px;
+    background-color: rgb(9, 9, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .service-container {
+        flex-direction: column;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        background-color: rgb(9, 9, 51);
+        border-radius: 5px;
+        padding: 0.5rem;
+        border: solid 1px #db924b;
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
