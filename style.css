@@ -62,15 +62,6 @@ section h2 {
     color: rgb(9, 9, 51);
 }
 
-.service img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    aspect-ratio: 16/9;
-    margin-top: 1rem;
-}
-
 #gallery {
     padding-top: 1.5rem;
     border-top: 1px solid lightgray;
